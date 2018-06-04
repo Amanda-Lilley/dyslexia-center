@@ -50,3 +50,11 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+
+@import "components/backgrounds";
+
+
+ .test{
+   background: pink;
+ } 

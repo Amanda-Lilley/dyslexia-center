@@ -1,0 +1,17 @@
+// Backgrounds used throught the site
+
+.image-displaced-background-grey {
+  background: #e3e7ea;
+  margin-top:350px;
+  img {
+    margin-top:-300px;
+  }
+
+  @include breakpoint(small only) {
+    margin-top:150px;
+    img {
+      margin-top:-100px;
+    }
+  
+  }
+}
