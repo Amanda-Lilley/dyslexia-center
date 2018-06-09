@@ -1,0 +1,12 @@
+.title-bar {
+  background: $light-gray;
+
+  &-title {
+    color: #000000;
+  }
+
+  >.menu-icon {
+    margin-right: 1rem;
+  }
+}
+

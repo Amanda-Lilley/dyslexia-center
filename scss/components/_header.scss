@@ -1,0 +1,25 @@
+.header {
+  &__logo {
+    width:80%;
+  }
+
+  &__cta {
+
+    display: flex;
+    align-content: center;
+    &-p {
+
+      margin: auto 0 auto auto;
+
+      @include breakpoint(small only) {
+        margin: 2rem 0;
+         
+       }
+      >.primary {
+        color: $color-primary;
+        font-size: 2rem;
+      }
+    }
+    
+}
+}
