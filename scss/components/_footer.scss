@@ -1,11 +1,27 @@
 .footer {
   background: $light-gray;
+  margin-top: 4rem;
   &__social {
     display: flex;
+    align-items: center;
     
     >i {
       margin-right: 2.4rem;
     }
+  }
+
+  &__address {
+
+    display: flex;
+    align-items: center;
+    >img {
+      width:80%;
+    }
+
+    @include breakpoint(small only) {
+      margin: .5rem 0;
+       
+     }
   }
 
   &__disclaimer {
