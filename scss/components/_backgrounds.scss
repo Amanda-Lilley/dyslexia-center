@@ -1,7 +1,9 @@
 // Backgrounds used throught the site
+$background-gray: #f6f6f6;
 
-.image-displaced-background-grey {
-  background: #f6f6f6;
+.background-gray {
+  background: $background-gray;
+ 
   // background: #e3e7ea;
   margin-top:350px;
   img {
@@ -15,4 +17,10 @@
     }
   
   }
+}
+
+.background-gray-list {
+  background: $background-gray;
+  padding: 2.4rem 0;
+  margin-top: 4rem;
 }
