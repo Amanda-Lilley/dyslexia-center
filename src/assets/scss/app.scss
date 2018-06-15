@@ -1,10 +1,6 @@
 @charset 'utf-8';
 
-@import "brand-design-tokens";
-@import 'brand-settings';
-// project specific above
-@charset 'utf-8';
-
+@import 'settings';
 @import 'foundation';
 @import 'motion-ui';
 
