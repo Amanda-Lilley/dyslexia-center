@@ -21,6 +21,19 @@
     font-weight: 1.8rem;
     >blockquote {
       color:#ffffff;
+      border-left: 0;
     }
   }
+}
+
+.hero-homepage {
+  
+  >img {
+    max-width: 100%;
+  }
+  // background: url(../img/abcblue.png);
+  // background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   height:15rem;
 }
