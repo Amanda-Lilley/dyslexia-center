@@ -1,37 +1,76 @@
-<!-- Example Navigation / Header -->
-<div class="off-canvas position-right" id="mobileNav" data-transition="push" data-off-canvas>
 
-  <!-- Close button -->
-  <button class="close-button" aria-label="Close menu" type="button" data-close>
-    <span aria-hidden="true">&times;</span>
-  </button>
-
-  <!-- Menu -->
-  <nav class="mobile">
-    <ul class="vertical menu">
-      <li {{#ifpage 'home' }}class="active"{{/ifpage}}><a href="home.html">home</a></li>
-      <li {{#ifpage 'other' }}class="active"{{/ifpage}}><a href="other.html">other page</a></li>
-    </ul>
-  </nav>
+<div class="callout header">
+  <div class="grid-container">
+    <div class="grid-x ">
+      <div class="medium-6 cell">
+        
+        
+        <img src="{{root}}assets/img/lighthouse3.png" alt="New England Dyslexia Center logo" class="header__logo">
+        
+      </div>
+      
+      <div class="medium-6 cell header__cta">
+        <p class="header__cta-p">
+          <b>SCHEDULE AN ASSESSMENT</b> <br>
+          
+          
+          <b class="primary">508-994-4577</b> 
+        </p>
+        
+      </div>
+    </div>
+    
+  </div>
 </div>
 
-<div class="off-canvas-content" data-off-canvas-content>
-  <!-- Your page content lives here -->
-
-  <a class="mobile-nav-button show-for-small-only" data-toggle="mobileNav">MENU <img src="https://www.placehold.it/40x40&text=logo" alt=""></a>
-
-  <div class="row">
-    <div class="column small-12">
-      <nav class="main">
-        <a href="/" class="logo">
-          <img src="https://www.placehold.it/40x40&text=logo" alt="">
-        </a>
-
-        <ul class="menu float-right hide-for-small-only">
-          <li {{#ifpage 'home' }}class="active"{{/ifpage}}><a href="home.html">home</a></li>
-          <li {{#ifpage 'work' }}class="active"{{/ifpage}}><a href="work.html">my work</a></li>
-          <li {{#ifpage 'other' }}class="active"{{/ifpage}}><a href="other.html">other page</a></li>
+<div class="grid-container">
+  <div class="drid-x grid-padding-x">
+    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+      <button class="hamburger-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
+    
+    <div class="top-bar" id="example-menu">
+      <div class="top-bar-right">
+       
+      </div>
+      <div class="top-bar-left">
+        <ul class=" medium-horizontal vertical dropdown menu" data-responsive-menu="accordion medium-dropdown">
+          <li><a href="index.html">Home</a></li>
+          <li class="has-submenu ">
+            <a href="#">Program</a>
+            <ul class="submenu menu vertical nested " data-submenu>
+              <li><a href="program.html">Program Details</a></li>
+              <li><a href="drugfree.html">Drug Free Solution</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu ">
+            <a href="#">Dyslexia</a>
+            <ul class="submenu menu vertical nested " data-submenu>
+              <li><a href="characteristics.html">Characteristics</a></li>
+              <li><a href="famousdyslexics.html">Famous Dyslexics</a></li>
+              <li><a href="thinkingstyle.html">Thinking Style</a></li>
+            </ul>
+          </li>
+          <li><a href="davisfacilitator.html">The Facilitator</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-      </nav>
+      </div>
     </div>
   </div>
+</div>
+
+<div class="grid-container ">
+  <div class="grid-x">
+    <div class="cell ">
+      <div class="hero-homepage">
+        <img src="{{root}}assets/img/abcblue.png" alt="">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

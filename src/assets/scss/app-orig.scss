@@ -3,19 +3,20 @@
 @import "brand-design-tokens";
 @import 'brand-settings';
 // project specific above
-@charset 'utf-8';
 
+// @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
 
 @include foundation-global-styles;
 // @include foundation-grid;
-// @include foundation-flex-grid;
-@include foundation-xy-grid-classes;
+// uses flex grid by default
+@include foundation-flex-classes;
+@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
-// @include foundation-range-input;
+@include foundation-range-input;
 @include foundation-accordion;
 @include foundation-accordion-menu;
 @include foundation-badge;
@@ -36,6 +37,8 @@
 @include foundation-orbit;
 @include foundation-pagination;
 @include foundation-progress-bar;
+@include foundation-progress-element;
+@include foundation-meter-element;
 @include foundation-slider;
 @include foundation-sticky;
 @include foundation-reveal;
@@ -47,27 +50,26 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 @include foundation-visibility-classes;
-// @include foundation-float-classes;
+@include foundation-float-classes;
 @include foundation-flex-classes;
-
-
-// @include foundation-prototype-classes;
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+// Project specific below
 
-@import "components/backgrounds";
-@import "components/social";
-@import "components/navigation";
-@import "components/footer";
-@import "components/header";
-@import "components/typography";
-@import "components/contact";
-@import "components/images";
-@import "components/heroimage";
-@import "components/list";
+@import "foundation-overrides";
+@import "helpers";
 
+// pages - page specific below
 
+// example:
+// @import "pages/about";
 
- 
+// components - import custom components
+
+// example:
+// @import "components/menu-colors";
+
+// try not to write any code below, except when prototyping, and group them into components above
+
