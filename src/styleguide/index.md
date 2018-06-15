@@ -1,150 +1,186 @@
 # The Grid
 
-Please refer to the ZURB Foundation 6 documentation on the Flexbox grid.
+<p class="lead">Problem: You've got tons of content, each needing different sized cells, and don't know how to quick and easily get it all done. Solution: The awesome XY grid!</p>
 
-#  Colors
+---
 
-The colors are shown below with their hex values for reference only. If using colors via CSS or Scss always default to the color variables shown.
+## Overview
 
-## Brand Colors
+The grid is built around two key elements: grid-x and cells. grid-container create a max-width and contain the grid, and cells create the final structure. Everything on your page that you don't give a specific structural style to should be within a grid-x or cell.
 
-The main colors used by the brand and design system.
+---
 
-<div class="row up-1 medium-up-3">
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #fa7252;"></span>
-      $brand-primary: #fa7252;
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #ffffff;"></span>
-      $brand-white: #ffffff;
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #000000;"></span>
-      $brand-black: #000000;
-    </div>
-  </div>
+## Nesting
+
+In the Grid you can nest cells down as far as you'd like. Just embed grid-x inside cells and go from there. Each embedded grid-x can contain up to 12 cells.
+
+---
+
+## How to Use
+
+Using this framework is easy. Here's how your code will look when you use a series of `<div>` tags to create cells.
+
+```html
+<div class="grid-x">
+  <div class="cell small-6 medium-4 large-3">...</div>
+  <div class="cell small-6 medium-8 large-9">...</div>
 </div>
-
-## Text Colors
-
-Colors of typography elements.
-
-
-<div class="row up-1 medium-up-3">
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #828282;"></span>
-      $text-body-copy: #828282;
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #565656;"></span>
-      $text-headline: #565656;
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #aa9f9d;"></span>
-      $text-subhead: #aa9f9d;
-    </div>
-  </div>
-</div>
-
-# UI Colors
-
-Other colors used in the UI.
-
-<div class="row up-1 medium-up-3">
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #f7f7f7;"></span>
-      $ui-card-background-grey: #f7f7f7;
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #dcdcdc;"></span>
-      $ui-outline-grey: #dcdcdc;
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #fbfbfd;"></span>
-      $ui-section-grey: #fbfbfd;
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #d8d8d8;"></span>
-      $ui-slider-bullet-grey: #d8d8d8;
-    </div>
-  </div>
-  <div class="column">
-    <div class="color-block">
-      <span style="background: #acacac;"></span>
-      $ui-shadow-color: #acacac;
-    </div>
-  </div>
-</div>
-
-
-
-# Scss Settings
-
-```scss
-// brand colors
-$brand-primary: #fa7252;
-$brand-white: #ffffff;
-$brand-black: #000000;
-
-// text colors
-$text-body-copy: #828282;
-$text-headline: #565656;
-$text-subhead: #aa9f9d;
-
-// ui colors
-$ui-card-background-grey: #f7f7f7;
-$ui-outline-grey: #dcdcdc;
-$ui-section-grey: #fbfbfd;
-$ui-slider-bullet-grey: #d8d8d8;
-$ui-shadow-color: #acacac;
-
-// ui shadow settings
-$ui-shadow-opacity: 0.5;
-$ui-shadow-blur: 24px;
-$ui-shadow-offset-x: 6px;
-$ui-shadow-offset-y: $ui-shadow-offset-x;
-
-// fonts
-
-$brand-font-body-copy: "proxima-nova", 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$brand-font-headline: "brandon-grotesque", 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$brand-font-button: $brand-font-headline;
-
-// spacing vars
-
-$brand-spacing-level-1: 50px;
-$brand-spacing-level-2: $brand-spacing-level-1 * 2;
-$brand-spacing-level-3: $brand-spacing-level-1 * 3;
-
-$ui-radius: 4px;
-$ui-radius-circle: 9999px;
-
 ```
+
+<div class="grid-x display">
+  <div class="cell small-12 large-4">4</div>
+  <div class="cell small-12 large-4">4</div>
+  <div class="cell small-12 large-4">4</div>
+</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-3">3</div>
+  <div class="cell small-12 large-6">6</div>
+  <div class="cell small-12 large-3">3</div>
+</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-2">2</div>
+  <div class="cell small-12 large-8">8</div>
+  <div class="cell small-12 large-2">2</div>
+</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-3">3</div>
+  <div class="cell small-12 large-9">9</div>
+</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-4">4</div>
+  <div class="cell small-12 large-8">8</div>
+</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-5">5</div>
+  <div class="cell small-12 large-7">7</div>
+</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-6">6</div>
+  <div class="cell small-12 large-6">6</div>
+</div>
+
+---
+
+## Nesting grid-x
+
+In the Grid you can nest cells down as far as you'd like. Just embed grid-x inside cells and go from there. Each embedded grid-x can contain up to 12 cells.
+
+```html
+<div class="grid-x">
+  <div class="cell small-8">8
+    <div class="grid-x">
+      <div class="cell small-8">8 Nested
+        <div class="grid-x">
+          <div class="cell small-8">8 Nested Again</div>
+          <div class="cell small-4">4</div>
+        </div>
+      </div>
+      <div class="cell small-4">4</div>
+    </div>
+  </div>
+  <div class="cell small-4">4</div>
+</div>
+```
+
+<div class="grid-x display">
+  <div class="cell small-8">8
+    <div class="grid-x">
+      <div class="cell small-8">8 Nested
+        <div class="grid-x">
+          <div class="cell small-8">8 Nested Again</div>
+          <div class="cell small-4">4</div>
+        </div>
+      </div>
+      <div class="cell small-4">4</div>
+    </div>
+  </div>
+  <div class="cell small-4">4</div>
+</div>
+
+---
+
+## Small Grid
+
+As you've probably noticed in the examples above, you have access to a small, medium, and large grid. If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid. You can override your small grid classes by adding medium or large grid classes.
+
+```html
+<div class="grid-x">
+  <div class="cell small-2">2</div>
+  <div class="cell small-10">10, last</div>
+</div>
+<div class="grid-x">
+  <div class="cell small-3">3</div>
+  <div class="cell small-9">9, last</div>
+</div>
+```
+
+<div class="grid-x display">
+  <div class="cell small-2">2</div>
+  <div class="cell small-10">10, last</div>
+</div>
+<div class="grid-x display">
+  <div class="cell small-3">3</div>
+  <div class="cell small-9">9, last</div>
+</div>
+
+
+
+# Colors
+
+<p class="lead">Below you can find the different values we created that support the primary color variable you can change at any time in <code>\_settings.scss</code></p>
+
+---
+
+<div class="grid-x up-1 medium-up-3 large-up-5">
+  <div class="cell">
+    <div class="color-block">
+      <span style="background: #2199e8"></span>
+      #2199e8
+    </div>
+  </div>
+  <div class="cell">
+    <div class="color-block">
+      <span style="background: #3adb76"></span>
+      #3adb76
+    </div>
+  </div>
+  <div class="cell">
+    <div class="color-block">
+      <span style="background: #ffae00"></span>
+      #ffae00
+    </div>
+  </div>
+  <div class="cell">
+    <div class="color-block">
+      <span style="background: #ec5840"></span>
+      #ec5840
+    </div>
+  </div>
+  <div class="cell">
+    <div class="color-block">
+      <span style="background: #0a0a0a"></span>
+      #0a0a0a
+    </div>
+  </div>
+</div>
 
 
 
 # Typography
 
-<h4>This design uses Brandon Grotesque for headings, subheads, and buttons.</h4>
-<p>This design uses Proxima Nova for paragraph text.</p>
+<p class="lead">This design uses Helvetica Neue for headings and paragraph text.</p>
+
+---
+
+## Headings
+
+Headings are used to denote different sections of content, usually consisting of related paragraphs and other HTML elements. They range from h1 to h6 and should be styled in a clear hierarchy (i.e., largest to smallest)
+
+---
+
+## Paragraphs
+
+Paragraphs are groups of sentences, each with a lead (first sentence) and transition (last sentence). They are block level elements, meaning they stack vertically when repeated. Use them as such.
 
 ---
 
@@ -174,17 +210,146 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione 
 
 
 
-# Coded Pair Example
+# Buttons
 
-This is some additional docs, to further explain the code example pair below. Maybe an `.additional-class` or `$variable` should be mentioned. Note the component below does not exist.
+<p class="lead">Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you're strapped to. On the web, we follow similar conventions.</p>
+
+---
+
+## Primary Buttons
+
+These buttons are primary calls to action and should be used sparingly. Their size can be adjusted with the `.tiny`, `.small`, and `.large` classes.
 
 ```html_example
-<div class="row">
-  <div class="column">
-    <div class="callout secondary">
-      <h3>James Stone Consulting</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque soluta rem ipsam adipisci sequi, vitae reprehenderit velit est, iure et consequatur recusandae voluptates debitis assumenda facilis? Ut quisquam odio dolor.</p>
+<a href="#" class="primary large button">Large button</a>
+<a href="#" class="primary button">Regular button</a>
+<a href="#" class="primary small button">Small button</a>
+<a href="#" class="primary tiny button">Tiny button</a>
+```
+
+---
+
+## Secondary Buttons
+
+These buttons are used for less important, secondary actions on a page.
+
+```html_example
+<a href="#" class="secondary large button">Large button</a>
+<a href="#" class="secondary button">Regular button</a>
+<a href="#" class="secondary small button">Small button</a>
+<a href="#" class="secondary tiny button">Tiny button</a>
+```
+
+
+
+# Forms
+
+<p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
+
+---
+
+## Elements of a Form
+
+A form should be marked up using its default HTML properties. The ones we make use of include (in hierarchical order):
+
+- Form
+- Label
+- Input
+- Select
+- Text area
+- Button
+
+---
+
+## How to Use
+
+Make forms great and easy to use with the following rules:
+
+- Wrap checkboxes and radio buttons within labels for larger hit areas, and be sure to set the for, name, and id attributes for all applicable elements.
+- Series of checkboxes and radio buttons below within a `<ul class="inline-list">`.
+- Before selecting any set of fields to use for a required input, explore other options (e.g., radio buttons over select lists).
+
+---
+
+## Learn All About Forms
+
+Check out the [Foundation Docs](http://foundation.zurb.com/sites/docs) to learn about how flexible our forms are for creating different layouts. It works perfectly with the grid to meet all your form needs.
+
+---
+
+## Form Layouts
+
+Form elements in Foundation are styled based on their type attribute rather than a class. Inputs in Foundation have another major advantage — they are full width by default. That means that inputs will run as wide as the column that contains them. However, you have two options which make these forms extremely versatile:
+
+- You can size inputs using column sizes, like `.medium-6`, `.small-6`.
+- You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.
+
+---
+
+## Form Example
+
+```html_example
+<form>
+  <div class="grid-x">
+    <div class="cell large-12">
+      <label>Label</label>
+      <input type="text" placeholder="placeholder">
     </div>
   </div>
-</div>
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6">
+      <label>Label</label>
+      <input type="text" placeholder="placeholder">
+    </div>
+    <div class="cell large-6">
+
+        <label>Label</label>
+        <div class="input-group">
+          <input class="input-group-field" type="text" placeholder="placeholder">
+          <span class="input-group-label">.com</span>
+        </div>
+
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="cell large-12">
+      <label>Select Box</label>
+      <select>
+        <option value="good">Go od</option>
+        <option value="better">Better</option>
+        <option value="best">Best</option>
+      </select>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="cell large-6">
+      <label>Choose Your Favorite</label>
+      <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
+      <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
+    </div>
+    <div class="cell large-6">
+      <label>Check these out</label>
+      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+    </div>
+  </div>
+  <div class="grid-x">
+    <div class="cell large-12">
+      <label>Textarea Label</label>
+      <textarea placeholder="placeholder"></textarea>
+    </div>
+  </div>
+</form>
+```
+
+
+
+# New Section
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora omnis suscipit id ut laborum recusandae molestias hic aliquid **expedita!** [Non dicta](zurb.com), autem obcaecati error, id ab voluptate unde culpa nulla.
+
+```html_example
+<a href="#" class="button">Button</a>
+<a href="#" class="button">Button</a>
+<a href="#" class="button">Button</a>
 ```
