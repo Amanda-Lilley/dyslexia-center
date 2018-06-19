@@ -3,3 +3,16 @@
   font-family: 'Libre Baskerville', serif;
   margin-top: 2rem;
 }
+
+.quote {
+  font-size: 1.6rem;
+
+  @include breakpoint(medium only) {
+    font-size: 1.2rem;
+  
+  }
+  @include breakpoint(small only) {
+    font-size: 1rem;
+  
+  }
+}
